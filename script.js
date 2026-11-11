@@ -203,7 +203,7 @@ const SERV = [
 ];
 $("trabajos").insertAdjacentHTML("afterend", `
   <section class="serv" id="servicios">
-    <h2 class="display">Mis<b>.</b>Servicios</h2>
+    <h2 class="display">Mis Servicios<b></b></h2>
     <div class="serv-grid">${SERV.map(([t, d]) => `<div class="serv-card"><h3>${t}</h3><p>${d}</p></div>`).join("")}</div>
   </section>`);
 document.querySelector('nav a[href="#trabajos"]').insertAdjacentHTML("afterend", '<a href="#servicios">Servicios</a>');
