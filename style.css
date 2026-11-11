@@ -1,3 +1,4 @@
+
 /* ====== COLORES (cámbialos aquí y cambia toda la página) ====== */
 :root{
   --rosa:#D1054F;        /* el color del "!" de tu logo */
@@ -192,3 +193,35 @@ footer h2{margin-bottom:44px}
   .intro h1{font-size:clamp(34px,10vw,48px)}
   nav a{margin-left:14px;font-size:13px}
 }
+
+
+/* Adapta el espacio disponible y conserva la imagen completa en escritorio */
+@media (min-width:901px){
+  .hero{--intro-col:clamp(300px,34vw,460px);grid-template-columns:var(--intro-col) minmax(0,1fr)!important}
+  .slide{left:var(--intro-col)!important;width:calc(100% - var(--intro-col))!important}
+  .slide .bg{object-fit:contain;object-position:center;background:#0b0a0d;transform:none}
+}
+
+
+/* Rellena el espacio lateral con la misma imagen, sin recortar el original */
+@media (min-width:901px){
+  .slide{isolation:isolate}
+  .slide::before{content:"";position:absolute;inset:-18px;z-index:0;background-image:var(--slide-bg);background-position:center;background-size:cover;filter:blur(18px);opacity:.72;transform:scale(1.06);pointer-events:none}
+  .slide .bg{z-index:1;object-fit:contain;object-position:center;background:transparent}
+  .slide .txt{z-index:2}
+}
+
+
+/* Foto completa sobre un fondo continuo compartido con el texto */
+@media (min-width:901px){
+  .hero{background:linear-gradient(135deg,#1b171d 0%,#111015 72%,#21131c 100%)!important}
+  .hero .intro{background:transparent!important}
+  .slide{background:transparent!important}
+  .slide::before{display:none!important}
+  .slide .bg{object-fit:contain;object-position:center;background:transparent}
+}
+
+
+/* El nombre RE!V toma el lugar de “increíble” en el titular */
+.intro-brand{display:inline-block;white-space:nowrap}
+.intro-brand-bang{color:var(--rosa)}

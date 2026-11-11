@@ -63,9 +63,9 @@ hero.innerHTML = DEST.map((p, i) => `
 /* Texto de presentación fijo sobre la portada */
 hero.insertAdjacentHTML("beforeend", `
   <div class="intro"><div class="intro-in">
-    <h1 class="display">Hago que tu marca se vea y se mueva como la imaginas</h1>
-    <p>Renders 3D de producto, motion graphics, edición de video, diseño gráfico y fotografía para marcas y músicos que quieren que su trabajo se vea a la altura de lo que hacen.</p>
-    <div class="intro-btns"><a class="btn" href="#trabajos">Ver proyecto</a><a class="btn ghost" href="#contacto">Pedir cotización</a></div>
+    <h1 class="display">Tu idea merece verse <span class="intro-brand">INCRE<span class="intro-brand-bang">!</span>bLE</span>.</h1>
+    <p>Cuéntame qué imaginas: lo hacemos realidad con 3D, video, diseño y fotografía pensados para tu marca.</p>
+    <div class="intro-btns"><a class="btn" href="#contacto">Hablemos de tu idea</a><a class="btn ghost" href="#trabajos">Ver proyectos</a></div>
   </div></div>`);
 
 function mostrar(i){

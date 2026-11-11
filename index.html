@@ -14,13 +14,74 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<style>
+  .slide::after, .hero::after { background: none !important; }
+
+  /* Escritorio: texto e imagen en columnas separadas */
+  @media (min-width: 901px) {
+    .hero { display: grid; grid-template-columns: minmax(340px, .82fr) minmax(0, 1.18fr); }
+    .intro { position: relative; inset: auto; grid-column: 1; grid-row: 1; z-index: 4; width: auto; min-width: 0; height: 100%; box-sizing: border-box; padding: clamp(32px, 6vh, 72px) clamp(28px, 4vw, 72px); background: #0a0a0a; pointer-events: none; }
+    .intro-in { width: 100%; max-width: 560px; margin: auto 0; }
+    .intro h1 { max-width: 12ch; font-size: clamp(42px, 4.3vw, 72px); line-height: .98; margin: 0 0 22px; }
+    .intro p { max-width: 38ch; font-size: clamp(16px, 1.35vw, 19px); line-height: 1.55; margin-bottom: 26px; }
+    .intro-btns { gap: 12px; }
+    .slide { left: 41%; width: 59%; padding: 0 32px 88px; justify-content: flex-end; text-align: right; }
+    .slide .txt { max-width: min(90%, 440px); }
+  }
+
+  /* Móvil: primero la foto y luego el bloque de texto */
+  @media (max-width: 900px) {
+    .hero { display: block; height: auto !important; min-height: 0 !important; overflow: hidden; }
+    .slide { top: 0; left: 0; width: 100%; height: clamp(280px, 48svh, 420px); padding: 0 18px 58px; justify-content: flex-end; text-align: right; }
+    .intro { position: relative; inset: auto; z-index: 4; display: block; width: 100%; height: auto; box-sizing: border-box; margin-top: clamp(280px, 48svh, 420px); padding: 28px 20px 36px !important; background: #0a0a0a; pointer-events: none; }
+    .intro-in { width: 100%; max-width: 620px; margin-inline: auto; padding: 0; border: 0; background: none; backdrop-filter: none; }
+    .intro h1 { max-width: 18ch; font-size: clamp(34px, 7.5vw, 48px); line-height: .98; margin: 0 0 16px; }
+    .intro p { width: auto; max-width: 52ch; font-size: 15px; line-height: 1.55; margin-bottom: 20px; }
+    .intro-btns { display: flex; flex-wrap: wrap; gap: 10px; }
+    .intro-btns .btn { padding: 12px 18px; font-size: 13px; }
+    .hero-ui { top: calc(clamp(280px, 48svh, 420px) - 38px); right: 14px; bottom: auto; }
+  }
+
+  /* Portada más compacta en escritorio y móvil */
+  @media (min-width: 901px) {
+    .hero { height: clamp(560px, 76svh, 760px); min-height: 560px; }
+    .intro h1 { max-width: 15ch; font-size: clamp(38px, 3.7vw, 56px); margin-bottom: 16px; }
+    .intro p { font-size: clamp(15px, 1.2vw, 17px); line-height: 1.45; margin-bottom: 20px; }
+    .intro-btns { gap: 10px; }
+  }
+  @media (min-width: 601px) and (max-width: 900px) {
+    .intro h1 { font-size: clamp(38px, 5vw, 50px); margin-bottom: 14px; }
+    .intro p { font-size: 15px; line-height: 1.45; margin-bottom: 18px; }
+  }
+  @media (max-width: 600px) {
+    .slide { height: clamp(240px, 36svh, 320px); }
+    .intro { margin-top: clamp(240px, 36svh, 320px); padding: 20px 20px 26px !important; }
+    .intro h1 { font-size: clamp(30px, 7vw, 38px); margin-bottom: 12px; }
+    .intro p { font-size: 14px; line-height: 1.45; margin-bottom: 16px; }
+    .intro-btns .btn { padding: 10px 14px; }
+    .hero-ui { top: calc(clamp(240px, 36svh, 320px) - 36px); }
+  }
+
+  /* Identidad RE!V para el bloque de presentación */
+  .intro { background: linear-gradient(135deg, #1b171d 0%, #111015 72%, #21131c 100%) !important; }
+  .intro-in { position: relative; z-index: 1; }
+  .intro::after { content: "!"; position: absolute; z-index: 0; right: 4%; top: 50%; transform: translateY(-50%); font-family: Anton, Impact, sans-serif; font-size: clamp(300px, 38vw, 580px); line-height: .72; color: #c9c5cc; opacity: .12; pointer-events: none; }
+  @media (max-width: 900px) {
+    .intro::after { right: 5%; top: auto; bottom: 4px; transform: none; font-size: clamp(250px, 62vw, 390px); opacity: .09; }
+  }
+  @media (max-width: 600px) {
+    .slide { height: clamp(300px, 48svh, 430px); }
+    .intro { margin-top: clamp(300px, 48svh, 430px); }
+  }
+</style>
 </head>
 <body>
 
 <header>
   <a href="#inicio" class="logo" aria-label="RE!V Studio, inicio">RE<b>!</b>V<small>STUDIO</small></a>
   <nav aria-label="Principal">
-    <a href="#trabajos">Proyectos</a>
+    <a href="#trabajos">Trabajos</a>
     <a href="#contacto">Contacto</a>
   </nav>
 </header>
