@@ -1,0 +1,3 @@
+Pon aquí tus imágenes y videos (jpg, png, webp, mp4).
+Luego escribe su ruta en projects.js, por ejemplo: "assets/mi-render.jpg"
+Consejo: usa nombres sin espacios ni tildes (mi-render.jpg, no "Mi Render.jpg").
