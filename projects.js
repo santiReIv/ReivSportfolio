@@ -34,7 +34,7 @@ const PERFIL = {
 
 const PROYECTOS = [
   {
-    titulo: "New Guitar Concept",
+    titulo: "Concepto Re!v Guitars",
     categoria: "3D",
     año: 2026,
     descripcion: "Giving a new look from Stratocaster to something more heavy.",
@@ -57,7 +57,7 @@ const PROYECTOS = [
   {
     titulo: "Palmas",
     categoria: "Foto",
-    año: 2025,
+    año: 2026,
     descripcion: "Rodada en las Palmas.",
     portada: "assets/JPEG/d.jpg",
     galeria: ["assets/JPEG/p(1).jpg","assets/JPEG/p(2).jpg","assets/JPEG/p(3).jpg","assets/JPEG/p(4).jpg","assets/JPEG/p(5).jpg","assets/JPEG/p(6).jpg",
@@ -67,7 +67,7 @@ const PROYECTOS = [
     destacado: true
   },
   {
-    titulo: "Beyerdynamic DT 990 3D Model",
+    titulo: "Beyerdynamic DT 990 modelado 3D",
     categoria: "3D",
     año: 2025,
     descripcion: "Headset 3D modeling.",
@@ -77,9 +77,9 @@ const PROYECTOS = [
     destacado: true
   },
   {
-    titulo: "Tim henson Signature guitar",
+    titulo: "Guitarra Signature de tim henson",
     categoria: "3D",            // exactamente: "3D", "Video", "Diseño" o "Foto"
-    año: 2026,
+    año: 2024,
     descripcion: "Tim henson guitar made in blender.",
     portada: "assets/tod.jpg",
     galeria: ["assets/tod.jpg"],
@@ -87,7 +87,7 @@ const PROYECTOS = [
     destacado: true            // true = sale también en la portada grande
 },
   {
-    titulo: "Concet Flyer",
+    titulo: "Flyer para concierto",
     categoria: "Diseño",            // exactamente: "3D", "Video", "Diseño" o "Foto"
     año: 2026,
     descripcion: "Una o dos frases sobre el trabajo.",
